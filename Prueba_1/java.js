@@ -168,7 +168,7 @@ form.addEventListener("submit",function (e){
     .then(function (data){
         console.log(data)
         var results = document.getElementById("resultados")
-        results.innerHTML = `<p>Tarea agregada</p> <p>Tarea: ${data.title}</p> <p>¿Completada?: ${data.completed}</p>`
+        results.innerHTML = `<p>Tarea agregada</p> <p>Id Generado: ${data.id}</p> <p>Tarea: ${data.title}</p> <p>¿Completada?: ${data.completed}</p>`
     })
 
 })
