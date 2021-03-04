@@ -4,12 +4,68 @@
         <meta charset="utf-8"/>
         <title> App1 </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/material.min.css">
     </head>
 
     <body>
-        <h1>Usuarios</h1>
-        <button onclick="request()">Solicitar info</button>
-        <div id="users"></div>
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+               <h3>Prueba 1 : Usuarios</h3>
+            </div>
+        </header>
+
+        <section class="mdl-seccioneshome mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-grid">
+               <!-- Sección 1 -->
+               <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-seccion-home1 mdl-card mdl-shadow--2dp">
+                     <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lista de usuarios</h2>
+                     </div>
+                     <div class="mdl-card__supporting-text" id="users">
+                     </div>
+                  </div>
+               </div>
+               <!-- Sección 2 -->
+               <div class="mdl-cell mdl-cell--4-col" style="text-align:center">
+                  <div class="mdl-seccion-home3 mdl-card mdl-shadow--2dp">
+                     <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" id="usuario"></h2>
+                     </div>
+                     <div class="mdl-card__supporting-text" id="posts">
+                     </div>
+                  </div>
+               </div>
+               <!-- Sección 3 -->
+               <div class="mdl-cell mdl-cell--4-col" style="text-align:center;">
+                  <div class="mdl-seccion-home3 mdl-card mdl-shadow--2dp">
+                     <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text" id="usuario2"></h2>
+                     </div>
+                     <form id="form" method="post" style="display: none">
+                        <div class="mdl-card__title">
+                           <a id="textid"></a>
+                           <a id="iduser2"></a>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="titletask" required />
+                            <label class="mdl-textfield__label" for="titletask">Título de tarea</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input type="checkbox" id="checkbox"><label for="checked">Completada?</label>
+                        </div>
+                        <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="buttontask" value="Agregar Tarea">
+                     </form>
+                     <div class="mdl-card__supporting-text" id="resultados"></div>
+                     <div class="mdl-card__supporting-text" id="todos">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
         <script src="java.js"></script>
+        <script src="js/material.min.js"></script>
     </body>
 </html>
